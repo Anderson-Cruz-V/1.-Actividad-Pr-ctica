@@ -7,19 +7,19 @@
 
 @if (ViewBag.Clave == null)
 {
-    <p>No se ingresó ninguna clave.</p>
+    <h1>No se ingresó ninguna clave.</h1>
 }
 else
 {
-    <p>La clave ingresada fue: <strong>@ViewBag.Clave</strong></p>
+    <h1>La clave ingresada fue: <strong>@ViewBag.Clave</strong></h1>
 
     @if (ViewBag.EsSegura == true)
     {
-        <p style="color:green;">La clave es segura.</p>
+        <h1>La clave es segura.</h1>
     }
     else
     {
-        <p style="color:red;">La clave NO es segura.</p>
+        <h1> La clave NO es segura.</h1>
         <p>Debe tener al menos 8 caracteres, una mayúscula y un número.</p>
     }
 }

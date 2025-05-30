@@ -22,7 +22,7 @@ namespace AcUnidad1.Controllers
         }
         public IActionResult Dividir(int a, int b)
         {
-            return View(a - b);
+            return View(a / b);
         }
     }
 

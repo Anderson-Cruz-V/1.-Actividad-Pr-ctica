@@ -8,9 +8,10 @@ namespace AcUnidad1.Controllers
         {
             return View();
         }
-        public string Holasoy ()
+        public IActionResult Inicio ()
         {
-            return "Hola soy Anderson, Matricula:SD-2022-04079";
+            return View();
+
 
         }
             
