@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AcUnidad1.props" />
+</Project>

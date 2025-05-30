@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Verificación de Palíndromo";
+}
+
+
+
+@if (ViewBag.Mensaje != null)
+{
+    <p>@ViewBag.Mensaje</p>
+}
+else
+{
+    <p>
+        La palabra "<strong>@ViewBag.Palabra</strong>"
+        @(ViewBag.EsPalindroma ? "sí es" : "no es") un palíndromo.
+    </p>
+}
