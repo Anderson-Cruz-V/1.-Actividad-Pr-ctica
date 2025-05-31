@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Convertir";
+}
+
+<h1>Convertir DOP a USD o EUR</h1>
+
+<form action="/Moneda/Convertir" method="post">
+    <label>Monto en DOP:</label>
+    <input name="Monto" type="number" step="any" required />
+    <br />
+
+    <label>Divisa:</label>
+    <select name="Divisa">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+    <br />
+
+    <input type="submit" value="Convertir" />
+</form>
+
+@if (ViewBag.Resultado != null)
+{
+    <h1>Resultado: @ViewBag.Resultado @ViewBag.Divisa</h1>
+}

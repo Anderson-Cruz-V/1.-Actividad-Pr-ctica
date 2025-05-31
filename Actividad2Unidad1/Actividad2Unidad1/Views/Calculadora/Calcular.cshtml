@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Calculadora";
+}
+
+<h1>Calculadora Aristmetica</h1>
+
+@using (Html.BeginForm())
+{
+    <h1>Ingresar valor :</h1>
+    @Html.TextBox("A")
+
+    <h1>Ingresar valor:</h1>
+    @Html.TextBox("B")
+
+    <h1>Operación:</h1>
+    @Html.DropDownList("operacion", new SelectList(new[] {
+        "Sumar", "Restar", "Multiplicar", "Dividir"
+    }))
+
+    <br />
+    <br />
+    <input type="submit" value="Calcular" />
+}
+
+@if (ViewBag.Resultado != null)
+{
+    <h1>Resultado: @ViewBag.Resultado</h1>
+}
+
+@if (ViewBag.Mensaje != null)
+{
+    <h1>@ViewBag.Mensaje</h1>
+}

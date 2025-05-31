@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Calcular";
+}
+
+<h1>Ingresar calificaciones del estudiante</h1>
+
+<form action="/Evaluacion/Calcular" method="post">
+    <label>Calificación Estudiante 1:</label>
+    <input name="A" type="number" step="any" required />
+    <br />
+
+    <label>Calificación Estudiante 2:</label>
+    <input name="B" type="number" step="any" required />
+    <br />
+
+    <label>Calificación Estudiante 3:</label>
+    <input name="C" type="number" step="any" required />
+    <br />
+
+    <label>Calificación Estudiante 4:</label>
+    <input name="D" type="number" step="any" required />
+    <br />
+
+    <input type="submit" value="Calcular Promedio" />
+</form>
+
+@if (ViewBag.Promedio != null)
+{
+    <h1>Promedio: @ViewBag.Promedio %</h1>
+    <h1>Estudiante 1: @ViewBag.Estado1</h1>
+    <h1>Estudiante 2: @ViewBag.Estado2</h1>
+    <h1>Estudiante 3: @ViewBag.Estado3</h1>
+    <h1>Estudiante 4: @ViewBag.Estado4</h1>
+}

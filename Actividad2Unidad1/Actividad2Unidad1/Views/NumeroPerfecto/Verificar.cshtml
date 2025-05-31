@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Verificar Número Perfecto";
+}
+
+<h1>Verificar Número Perfecto</h1>
+
+@using (Html.BeginForm())
+{
+    <h1>Ingrese un digito:</h1>
+    @Html.TextBox("A", "", new { type = "number", required = "required" })
+
+    <br />
+    <input type="submit" value="Verificar" />
+}
+
+@if (ViewBag.Mensaje != null)
+{
+    <h1>@ViewBag.Mensaje</h1>
+}

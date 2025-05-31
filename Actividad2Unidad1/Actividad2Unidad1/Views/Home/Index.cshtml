@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Inicio";
+}
+
+<h2>Formulario de Bienvenida</h2>
+
+@using (Html.BeginForm("Saludo", "Home", FormMethod.Post))
+{
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required />
+    <button type="submit">Enviar</button>
+}
